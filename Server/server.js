@@ -5,11 +5,12 @@ const app = express();
 const router = require('./api/routes');
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/dist', express.static(path.join(__dirname, 'dist')));
 
 app.use('/api', router);
 
 app.get('/', (req, res, next) =>
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(__dirname, '..', 'client', 'index.html'))
 );
 
 const setUp = async () => {
