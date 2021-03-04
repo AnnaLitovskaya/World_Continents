@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Continents from './components/Continents.js';
+import Main from './Main.js';
 
 const app = document.querySelector('#app');
 
-ReactDOM.render(<Continents />, app);
+ReactDOM.render(<Main />, app);
