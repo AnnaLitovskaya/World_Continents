@@ -1,4 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Continents from './components/Continents.js';
 
-ReactDOM.render(<hr />, document.getElementById('app'));
+const app = document.querySelector('#app');
+
+ReactDOM.render(<Continents />, app);

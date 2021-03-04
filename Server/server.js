@@ -4,8 +4,8 @@ const express = require('express');
 const app = express();
 const router = require('./api/routes');
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
-app.use('/dist', express.static(path.join(__dirname, 'dist')));
+app.use('/assets', express.static(path.join(__dirname, '..', 'assets')));
+app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
 
 app.use('/api', router);
 
