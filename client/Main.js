@@ -11,7 +11,6 @@ class Main extends Component {
       selectedPage: '',
       facts: [],
     };
-    this.getPageComponents = this.getPageComponents.bind(this);
   }
 
   async getPageComponents() {
@@ -21,12 +20,6 @@ class Main extends Component {
         await axios.get(`/api/continents/fact/${this.state.selectedPage}`)
       ).data;
       this.setState({ facts });
-    }
-  }
-
-  async componentDidUpdate() {
-    if (window.location.hash.slice(1) !== this.state.selectedPage) {
-      this.getPageComponents();
     }
   }
 

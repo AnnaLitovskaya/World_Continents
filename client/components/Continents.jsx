@@ -2,15 +2,28 @@ import React, { Component } from 'react';
 
 const Continents = (props) => {
   return (
-    <ul>
-      {props.continents.map((continent) => {
-        return (
-          <li className={`#${continent.id}`} key={continent.id}>
-            <a href={`/#${continent.id}`}>{continent.name}</a>
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <img
+        src="../../assets/WorldMap.gif"
+        alt="map"
+        useMap="#worldmap"
+        width="800"
+        height="379"
+      />
+      <map name="worldmap">
+        {props.continents.map((continent) => {
+          return (
+            <area
+              key={continent.id}
+              shape="rect"
+              coords={continent.map}
+              alt={continent.name}
+              href={`/#${continent.id}`}
+            />
+          );
+        })}
+      </map>
+    </div>
   );
 };
 
