@@ -1,5 +1,5 @@
 body {
-  font-family: verdana;
+  font-family: Andale Mono;
 }
 img {
   display: block;
@@ -9,4 +9,17 @@ img {
 
 h1 {
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+li {
+  margin: 1rem;
+}
+
+ul {
+  list-style-image: url('icon.png');
 }

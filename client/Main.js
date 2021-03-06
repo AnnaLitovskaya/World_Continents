@@ -34,16 +34,19 @@ class Main extends Component {
 
   render() {
     const { continents, selectedPage, facts } = this.state;
+    console.log(continents);
     return (
       <div>
         <h1>
           <a href={'/'}>Seven World Continents</a>
         </h1>
-        {!selectedPage ? <Continents continents={continents} /> : ''}
-        {!!selectedPage ? (
-          <Facts facts={facts} continent={continents[selectedPage * 1 - 1]} />
+        {!selectedPage ? (
+          <Continents continents={continents} />
         ) : (
-          ''
+          <div>
+            <h2>{continents[selectedPage * 1 - 1].name}</h2>
+            <Facts facts={facts} continent={continents[selectedPage * 1 - 1]} />
+          </div>
         )}
       </div>
     );
