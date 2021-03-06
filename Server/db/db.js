@@ -1,6 +1,8 @@
 const pg = require('pg');
 
-const client = new pg.Client('postgres://localhost/world_map');
+const client = new pg.Client(
+  process.env.DATABASE_URL || 'postgres://localhost/world_map'
+);
 
 const syncAndSeed = async () => {
   const SQL = `
